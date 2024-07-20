@@ -11,7 +11,7 @@ const Model = ({isOpen, onClose}) =>{
             <>
             <Backdrop />
         <ModelContainer isOpen={isOpen} onClose={onClose}/>
-        </>
+        </> 
 )}
 </AnimatePresence>
 
