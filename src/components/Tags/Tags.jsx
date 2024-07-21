@@ -6,7 +6,6 @@ const Tags = () => {
   const handleTagClick = (index) => {
     setActiveTag(index);
   };
-
   return (
     <TagsContainer>
       {["Work", "Short Break", "Long Break"].map((tag, i) => (

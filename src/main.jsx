@@ -21,12 +21,7 @@ html,body{
     color:white;
   }
 `;
-// ReactDOM.render(
-//   <React.StrictMode>
-//       <App/>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+
 
 const theme={
   colors:{
