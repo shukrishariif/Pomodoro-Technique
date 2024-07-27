@@ -1,0 +1,436 @@
+/* Main Container ----------------------------------------*/
+
+.todo-app-container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e;
+    height: 100vh;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color */
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 2%;
+    border-radius: 15px;
+}
+
+.subhead {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Logo designer  ---------------------------------------*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    background-color: #3498db;
+    /* Blue background color */
+    color: #fff;
+    /* Light text color */
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Filter buttons ---------------------------------------*/
+
+.filter-buttons button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #1b1825;
+    /* Dark button background color */
+    color: #fff;
+    /* Light button text color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button.active {
+    background-color: #555;
+    /* Darker background color for the active filter */
+}
+
+/* Counter buttons ---------------------------------------*/
+
+.task-counts p {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.task-counts p:hover {
+    background-color: #555;
+}
+
+.completed {
+    color: #00FF00
+}
+
+.incomplete {
+    color: #FFFF99;
+}
+
+.task-counts {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Task lists ---------------------------------------*/
+
+.main {
+    background-color: black;
+    border-radius: 15px;
+    margin: 1% 0;
+    height: 81vh;
+    overflow-y: scroll;
+}
+
+.tasks-list {
+    padding: 2%;
+    padding-top: 0;
+}
+
+.main::-webkit-scrollbar {
+    width: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    padding: .8% 2%;
+    border-radius: 10px;
+}
+
+.task {
+    width: 80%;
+}
+
+.task-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.edit-button {
+    color: #FFFF99;
+}
+
+.delete-button {
+    color: #c4b5b5;
+}
+
+.add-task-container {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    /* Dark background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-task {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 2%;
+}
+
+.add-task-container input {
+    flex: 1;
+    padding: 18px;
+    margin-right: 10px;
+    background-color: #1e1e1e;
+    /* Dark input background color */
+    color: #fff;
+    /* Light input text color */
+    border: none;
+    /* Dark input border color */
+    border-radius: 10px;
+}
+
+.add-task-container button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 18px 38px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.add-task-container button:hover {
+    background-color: #555;
+}
+
+.custom-checkbox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+    /* Change border color */
+    background-color: #fff;
+    /* Change background color */
+    position: relative;
+    margin-right: 10px;
+    appearance: none;
+    background-color: #333;
+    /* Remove default appearance */
+    outline: none;
+    /* Remove default focus outline */
+}
+
+.custom-checkbox:checked {
+    background-color: #333;
+    border-color: #333;
+    /* Change background color for checked state */
+}
+
+.custom-checkbox:checked::after {
+    content: '\2713';
+    /* Unicode checkmark character */
+    font-size: 14px;
+    color: #fff;
+    color: #00FF00;
+    /* Change color of the checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dialog box for edit ---------------------------------------*/
+
+.edit-dialog-overlay {
+    position: fixed; /* Make sure the overlay covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the dialog vertically */
+}
+
+.edit-dialog {
+    background-color: #1e1e1e;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color */
+    padding: 20px;
+    border-radius: 8px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-dialog p {
+    margin-bottom: 10px;
+}
+
+.edit-dialog input {
+    /* width: 100%; */
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #333;
+    /* Dark input background color */
+    color: #fff;
+    /* Light input text color */
+    border: 1px solid #555;
+    /* Dark input border color */
+    border-radius: 4px;
+}
+
+.edit-dialog button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.edit-dialog button:hover {
+    background-color: #5ea6d5;
+}
+
+.edit-dialog button:last-child {
+    background-color: #333;
+}
+
+.edit-dialog button:last-child:hover {
+    background-color: #444;
+}
+
+/* Sweetalert customization ---------------------------------------*/
+
+.swal2-popup {
+    background-color: #2d2d2d;
+    /* Dark background color */
+    color: #ffffff;
+    /* Text color */
+}
+
+.swal2-title {
+    color: #ffffff;
+    /* Title text color */
+}
+
+.swal2-content {
+    color: #cccccc;
+    /* Content text color */
+}
+
+.swal2-confirm,
+.swal2-cancel {
+    color: #ffffff;
+    /* Button text color */
+    background-color: #555555;
+    /* Button background color */
+}
+
+/* Media Queries ---------------------------------------*/
+
+@media (max-width:1000px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .subhead {
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        padding: 2%;
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+    }
+
+    .main {
+        height: 78vh;
+    }
+
+    .edit-dialog {
+        width: 50%;
+    }
+}
+
+@media (max-width:630px) {
+    .main {
+        height: 80vh;
+    }
+
+    .task {
+        width: 70%;
+    }
+
+    .subhead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .task-counts {
+        display: none;
+    }
+
+    .todo-app-container {
+        padding: 10px;
+    }
+
+    .edit-dialog {
+        width: 70%;
+    }
+}
+
+@media (max-width:430px) {
+    .edit-button, .delete-button {
+        padding: 4px 6px;
+        font-size: 7px;
+    }
+
+    .add-task {
+        padding: 4%;
+        padding-bottom: .5%;
+    }
+
+    .add-task-container input {
+        padding: 12px;
+    }
+
+    .add-task-container button {
+        padding: 12px 25px;
+    }
+
+    .edit-dialog {
+        width: 78%;
+    }
+}
+
+@media (max-width:350px) {
+    .task {
+        width: 60%;
+    }
+}
