@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 #git ignore
-TaskList.jsx
 TodoHeader.jsx
 TodoApp.jsx
