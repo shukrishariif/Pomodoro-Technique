@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 #git ignore
-EditDialog.jsx
 FilterButtons.jsx
 TaskCounts.jsx
 TaskList.jsx
