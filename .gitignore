@@ -22,9 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-CircularProgress.jsx
-Model
-
-TaskManager
-Tasks
+#git ignore
+public/favicon.ico
+public/manifest.json
+public/robots.txt
+src/TodoApp.jsx
+src/components/Todo/
+src/context/
+src/reportWebVitals.js
+src/setupTests.js
+src/style/
+package-lock.json
+package.json

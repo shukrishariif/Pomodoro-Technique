@@ -10,12 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^5.16.5",
+    "@mui/material": "^5.14.18",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "framer-motion": "^11.2.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "web-vitals": "^4.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -25,6 +34,7 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "sass": "^1.77.8",
     "vite": "^5.3.1"
   }
 }

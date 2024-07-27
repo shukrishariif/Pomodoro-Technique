@@ -5,6 +5,8 @@ import {createGlobalStyle ,ThemeProvider} from "styled-components";
 import App from './App';
 import Timer from './components/Timer/Timer';
 import StateProvider from './components/StateProvider';
+import reportWebVitals from './reportWebVitals';
+
 const GlobalStyle= createGlobalStyle`
 *{
   margin: 0%;
@@ -42,3 +44,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </StateProvider>
   </React.StrictMode>
 );
+reportWebVitals();
