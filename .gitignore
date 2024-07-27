@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 #git ignore
-public/robots.txt
 src/TodoApp.jsx
 src/components/Todo/
 
