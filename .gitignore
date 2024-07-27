@@ -23,8 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 #git ignore
-public/favicon.ico
-public/manifest.json
 public/robots.txt
 src/TodoApp.jsx
 src/components/Todo/
