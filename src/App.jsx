@@ -82,28 +82,7 @@ function App() {
       <CogIcon onClick={onOpen}>
         <FaCogs />
       </CogIcon>
-      {/* <TaskManager
-        tasks={tasks}
-        newTask={newTask}
-        setNewTask={setNewTask}
-        addTask={addTask}
-        toggleTaskCompletion={toggleTaskCompletion}
-        deleteTask={deleteTask}
-        startEdit={startEdit}
-        saveEdit={saveEdit}
-        cancelEdit={cancelEdit}
-        editingIndex={editingIndex}
-        editedTask={editedTask}
-        setEditedTask={setEditedTask}
-        pomodoroTimer={pomodoroTimer}
-        setPomodoroTimer={setPomodoroTimer}
-        startTime={startTime}
-        finishTime={finishTime}
-        isRunning={isRunning}
-        startPomodoro={startPomodoro}
-        takeBreak={takeBreak}
-      />
-      <Tasks /> */}
+     
       <TaskProvider>
       <TodoApp />
     </TaskProvider>

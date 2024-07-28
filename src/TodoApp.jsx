@@ -7,8 +7,7 @@ import TaskCounts from "./components/Todo/components/TaskCounts";
 import TaskList from "./components/Todo/components/TaskList";
 import AddTaskForm from "./components/Todo/components/AddTaskForm";
 import EditDialog from "./components/Todo/components/EditDialog";
-// import Swal from "sweetalert2";
-// import "sweetalert2/dist/sweetalert2.css";
+
 
 const TodoApp = () => {
   const { state, dispatch } = useContext(TaskContext);

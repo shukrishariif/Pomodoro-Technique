@@ -21,7 +21,7 @@ background: conic-gradient(
     border-radius: 50%;
     display: grid;
     place-items :center;
-    box-shadow: -50px -50px 150px rgba(212, 210, 221, 0.74),
+    box-shadow: -50px -50px 150px rgba(238, 237, 240, 0.74),
     50px -10px 100px rgba(0,0,0,0.5) ;
 
 `;
