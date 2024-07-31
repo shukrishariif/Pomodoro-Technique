@@ -4,11 +4,12 @@ import Tags from "./components/Tags/Tags";
 import Timer from "./components/Timer/Timer";
 import { useState } from "react";
 import { FaCogs } from "react-icons/fa";
-import Todo from "./components/Todo/components/AddTaskForm"
+import Todo from "./components/Todo/components/AddTaskForm";
 import TodoApp from "./TodoApp";
 import TaskProvider from "./context/TaskProvider";
 import MainFooter from './components/MainFooter';
-import Footer from  "./components/Footer";
+// import Footer from  "./components/Footer";
+import Footer from './components/Footer'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,12 +38,12 @@ function App() {
 
   const toggleTaskCompletion = (index) => {
     const updatedTasks = [...tasks];
-    updatedTasks[index].completed =!updatedTasks[index].completed;
+    updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
   };
 
   const deleteTask = (index) => {
-    const updatedTasks = tasks.filter((_, i) => i!== index);
+    const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   };
 
@@ -85,12 +86,12 @@ function App() {
         <FaCogs />
       </CogIcon>
       <TaskProvider>
-      <TodoApp />
-    </TaskProvider>
-    <Todo />
-    <MainFooter/>
-
-    <Footer />
+        <TodoApp />
+      </TaskProvider>
+      <Todo />
+      <MainFooter />
+      
+      <Footer /> {/* Move the Footer component to be the last one */}
     </>
   );
 }
@@ -108,5 +109,3 @@ const CogIcon = styled.div`
   justify-content: center;
   font-size: 5rem;
 `;
-
-
