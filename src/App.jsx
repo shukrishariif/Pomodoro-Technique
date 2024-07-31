@@ -7,9 +7,9 @@ import { FaCogs } from "react-icons/fa";
 import Todo from "./components/Todo/components/AddTaskForm";
 import TodoApp from "./TodoApp";
 import TaskProvider from "./context/TaskProvider";
-import MainFooter from './components/MainFooter';
-// import Footer from  "./components/Footer";
 import Footer from './components/Footer'
+import MainFooter from './components/MainFooter';
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,9 +89,9 @@ function App() {
         <TodoApp />
       </TaskProvider>
       <Todo />
+      <Footer /> 
       <MainFooter />
-      
-      <Footer /> {/* Move the Footer component to be the last one */}
+    
     </>
   );
 }
