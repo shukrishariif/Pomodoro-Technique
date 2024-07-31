@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Model from "./components/Model/Model";
+import Model from "./components/Modell/Model";
 import Tags from "./components/Tags/Tags";
 import Timer from "./components/Timer/Timer";
 import { useState } from "react";
