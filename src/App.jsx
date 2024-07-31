@@ -7,6 +7,8 @@ import { FaCogs } from "react-icons/fa";
 import Todo from "./components/Todo/components/AddTaskForm"
 import TodoApp from "./TodoApp";
 import TaskProvider from "./context/TaskProvider";
+import MainFooter from './components/MainFooter';
+import Footer from  "./components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,11 +84,13 @@ function App() {
       <CogIcon onClick={onOpen}>
         <FaCogs />
       </CogIcon>
-     
       <TaskProvider>
       <TodoApp />
     </TaskProvider>
     <Todo />
+    <MainFooter/>
+
+    <Footer />
     </>
   );
 }
@@ -104,3 +108,5 @@ const CogIcon = styled.div`
   justify-content: center;
   font-size: 5rem;
 `;
+
+

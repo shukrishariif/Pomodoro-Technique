@@ -53,5 +53,3 @@ const ResetButton = styled(StartPauseButton)`
 color:red;
 `;
     
-
-

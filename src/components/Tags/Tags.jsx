@@ -1,11 +1,18 @@
-import styled, {css} from "styled-components";
-import {useContext} from "react";
-import { StateContext } from "../StateProvider";
+import styled from 'styled-components';
+import { useContext } from 'react';
+import { StateContext } from '../StateProvider'; // Ensure this path is correct
+
 const Tags = () => {
-  const {activeTag, setActiveTag} = useContext(StateContext);
+  const { activeTag, setActiveTag } = useContext(StateContext);
+
   const handleTagClick = (index) => {
-    setActiveTag(index);
+    if (typeof setActiveTag === 'function') {
+      setActiveTag(index);
+    } else {
+      console.error('setActiveTag is not a function');
+    }
   };
+
   return (
     <TagsContainer>
       {["Work", "Short Break", "Long Break"].map((tag, i) => (
@@ -37,7 +44,7 @@ const TagsContainer = styled.div`
 const Tag = styled.button`
   all: unset;
   height: 4rem;
-  background: ${(props) => (props.active ? "#b85600" : props.theme.colors.secondry)};
+  background: ${(props) => (props.active ? "#b85600" : props.theme.colors.secondary)};
   text-align: center;
   border-radius: 5rem;
   flex: 1;
